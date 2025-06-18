@@ -23,7 +23,7 @@ const CreateWritingPage = () => {
       const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
       setTitle(saved.title ?? '');
       setSummary(saved.summary ?? '');
-      setContent(saved.content ?? '<p></p>');
+      setContent(saved.content ?? '');
       saved.savedAt && setSavedAt(new Date(saved.savedAt));
     }, []);
 

@@ -62,12 +62,12 @@ const NavBarExample = () => {
                 </ul>
             </div>
         <div className="navbar-end">
-    <div className="btn">
-        <Link to={"/create"}>
-            Login to Write
-        </Link>
-    </div>
-  </div>
+            <Link to={"/create"}>
+                <div className="btn">
+                    Login to Write
+                </div>
+            </Link>
+        </div>
 </div>
   )
 }
