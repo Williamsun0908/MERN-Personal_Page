@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { MathJax } from 'better-react-mathjax'
+import api from '../lib/axios'
 
 const WritingsPage = () => {
     const [writings,setwritings] = useState([])
@@ -10,7 +11,7 @@ const WritingsPage = () => {
     useEffect(() => {
         const fetchWritings = async () => {
             try {
-                const res = await axios.get("http://localhost:5001/api/writings")
+                const res = await api.get("/writings")
                 setwritings(res.data)
             } catch (error) {
                 console.log("Error fetching writings",error)
