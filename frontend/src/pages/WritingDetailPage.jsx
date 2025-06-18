@@ -32,18 +32,18 @@ const WritingDetailPage = () => {
       <div className="card border-y">
                 <div className="card-body">
                     <h2 className="card-title">
-                        <MathJax hideUntilTypeset={"first"}>
+                        <MathJax dynamic hideUntilTypeset={"first"}>
                             {writing?.title}
                         </MathJax>
                     </h2>
                     <h2 className="text-sm">
                         {new Date(writing?.createdAt).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' })}
                     </h2>
-                    <MathJax hideUntilTypeset={"first"}>
+                    <MathJax dynamic hideUntilTypeset={"first"}>
                         {writing?.summary}
                     </MathJax>
 
-                    <MathJax hideUntilTypeset={"first"}>
+                    <MathJax dynamic hideUntilTypeset={"first"}>
                         {writing?.content}
                     </MathJax>
                 </div>

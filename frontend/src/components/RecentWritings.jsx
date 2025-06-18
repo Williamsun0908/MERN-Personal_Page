@@ -39,7 +39,7 @@ const RecentWritings = () => {
                     <Link to={`/writings/${writing?._id}`}>
                         <h2 className="card-title hover:text-sky-700">
                             
-                                <MathJax hideUntilTypeset={"first"}>
+                                <MathJax dynamic hideUntilTypeset={"first"}>
                                     {writing?.title}
                                 </MathJax>
                             
@@ -48,7 +48,7 @@ const RecentWritings = () => {
                     <h2 className="text-sm">
                         {new Date(writing?.createdAt).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short' })}
                     </h2>
-                    <MathJax hideUntilTypeset={"first"}>
+                    <MathJax dynamic hideUntilTypeset={"first"}>
                         {writing?.summary}
                     </MathJax>
                 </div>
