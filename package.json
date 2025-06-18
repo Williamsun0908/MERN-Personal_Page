@@ -1,0 +1,22 @@
+{
+  "name": "personal-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend",
+    "start": "npm run start --prefix backend"
+  
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Williamsun0908/MERN-Personal_Page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Williamsun0908/MERN-Personal_Page/issues"
+  },
+  "homepage": "https://github.com/Williamsun0908/MERN-Personal_Page#readme",
+  "description": ""
+}

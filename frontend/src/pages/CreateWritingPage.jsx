@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router';
 import TextareaAutosize from 'react-textarea-autosize';
 import { MathJax } from 'better-react-mathjax';
 import axios from 'axios';
+import api from '../lib/axios';
 
 const CreateWritingPage = () => {
 
@@ -39,7 +40,7 @@ const CreateWritingPage = () => {
 
     const handleSubmit = async (e) => {
         try {
-            await axios.post("http://localhost:5001/api/writings",
+            await api.post("/writings",
                 {
                     title,
                     summary,

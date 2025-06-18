@@ -3,6 +3,7 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import { MathJax } from "better-react-mathjax";
 import { Link } from 'react-router';
+import api from '../lib/axios';
 
 const RecentWritings = () => {
 
@@ -12,7 +13,7 @@ const RecentWritings = () => {
     useEffect(() => {
         const fetchWritings = async () => {
             try {
-                const res = await axios.get("http://localhost:5001/api/writings")
+                const res = await api.get("/writings")
                 setwritings(res.data)
             } catch (error) {
                 console.log("Error fetching writings",error)

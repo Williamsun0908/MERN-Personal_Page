@@ -3,6 +3,9 @@ import { useParams } from 'react-router';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MathJax } from 'better-react-mathjax';
+import api from '../lib/axios';
+
+
 
 const WritingDetailPage = () => {
     const { id } = useParams()
@@ -14,7 +17,7 @@ const WritingDetailPage = () => {
     useEffect(() => {
         const fetchWritings = async () => {
             try {
-                const res = await axios.get(`http://localhost:5001/api/writings/${id}`)
+                const res = await api.get(`/writings/${id}`)
                 setwriting(res.data)
             } catch (error) {
                 console.log("Error fetching writings",error)
