@@ -1,6 +1,5 @@
 import React from 'react'
 import performance from "../performance.png"
-import self from "../self.JPG"
 
 const AboutMe = () => {
   return (
