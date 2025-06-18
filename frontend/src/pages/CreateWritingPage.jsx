@@ -100,14 +100,14 @@ const CreateWritingPage = () => {
             <div className="card">
                 <div className="card-body">
                     <h2 className="card-title">
-                        <MathJax hideUntilTypeset={"first"}>
+                        <MathJax dynamic hideUntilTypeset={"first"}>
                             {title}
                         </MathJax>
                     </h2>
-                    <MathJax hideUntilTypeset={"first"}>
+                    <MathJax dynamic hideUntilTypeset={"first"}>
                         {summary}
                     </MathJax>
-                    <MathJax hideUntilTypeset={"first"}>
+                    <MathJax dynamic hideUntilTypeset={"first"}>
                         {content}
                     </MathJax>
                 </div>
